@@ -1,4 +1,3 @@
-
 import java.util.*;
 public class Main
 {
@@ -16,7 +15,7 @@ switch (c)
         res=a+b;
     break;
     case '-':
-        res=a-b;
+        res=(a>b)?a-b:b-a;
     break;
     case '*':
         res=a*b;
