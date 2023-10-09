@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        int i;
+        for(i=0;i<11;i++)
+        {
+         if (i%2==0)
+         System.out.println(i);
+        }
+        System.out.println("Final value of i" +i);
+    for(i=0; i<11; i++)
+    {
+        if (i%2!=0)
+        System.out.println(i);
+    }
+}
+}
