@@ -1,0 +1,24 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+     int a, arm=0, s=0, b;
+     Scanner sc = new Scanner(System.in);
+     System.out.println("Enter a three digit number");
+     a=sc.nextInt();
+     b=a;
+     while(a>0)
+     {
+         arm=a%10;
+         a=a/10;
+         arm = arm*arm*arm;
+         s=s+arm;
+     }
+     if(s==b)
+     System.out.println("The number is armstrong:" +s);
+     else
+     System.out.println("The number is not armstrong.");
+    }
+    
+}
