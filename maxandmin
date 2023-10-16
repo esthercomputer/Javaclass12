@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        int arr[]={3,7,5,9,12}; int max=0, min=999;
+        
+      for(int i=0;i<arr.length;i++)  
+      {
+          if(arr[i]>max)
+          max=arr[i];
+          if(arr[i]<min)
+          min=arr[i];
+      }
+      System.out.println("the max and min values are " +max+ " and " +min);
+    }
+}
