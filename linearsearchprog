@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int arr[]=new int[10] ; int n;
+        System.out.println("Enter the number of array elements");
+        n=sc.nextInt();
+        System.out.println("Enter the array elements");
+        for(int i=0;i<n;i++)
+        {
+           arr[i]=sc.nextInt();
+        }
+        System.out.println("Enter the target value:");
+        int tar; int f=0;
+        tar=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            if(tar==arr[i])
+            f=1;
+        }
+        if(f==1)
+        System.out.println("The target value is found.");
+        else 
+        System.out.println("The target value is not found.");
+    
+        
+        
+        
+        
+    }
+}
