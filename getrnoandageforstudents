@@ -1,0 +1,44 @@
+import java.util.*;
+public class Main
+{
+    //object declaration
+    static Student s1=new Student();
+	static Student s2=new Student();
+	
+	public static void main(String[] args) {
+	    
+	    //function call using object
+		s1.getdata();
+		s2.getdata();
+		s1.printdata();    
+		s2.printdata();
+		//calling a fn inside my main class. so im not using an object here
+		addrno();
+	}
+	
+	public static void addrno()
+	{
+	    int sum;
+	    sum=s1.rno+s2.rno;  //adding rno of 2 differeent objects. rno is public
+	    System.out.println("the sum of rno is"+sum);
+	}
+}
+
+class Student{          //class defenition
+    
+    int rno,age;        //instance variables
+	public void getdata()   //function to get the data frm user
+	{
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("enter the roll number and age of the student");
+	        rno=sc.nextInt();
+	        age=sc.nextInt();
+	    
+	}
+	public void printdata() //function to print the student data
+	{
+	    System.out.println("the roll number of the student is "+rno);
+	    System.out.println("the age is "+age);
+	}
+	
+}
