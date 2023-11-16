@@ -1,0 +1,55 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int a,b,i=0,l,k,f,h=0,counter=0;
+	    int arr1[]=new int[20];
+	    int arr2[]=new int[20];
+	    
+	    System.out.println("enter the 2 numbers");
+	    a=sc.nextInt();
+	    b=sc.nextInt();
+	    
+	    for(int x=a;x<=b;++x)
+	    {
+	        arr1[i]=x;      //the individual values between the given range is stored inside the array
+	        i++;               //increments the index. The last i value gives the length of the array
+	    }
+	    l=i;        //store the lenght of array inside the var l
+	    for(i=0;i<l;++i)
+	    {
+	        //to check unique digits
+	        k=arr1[i];
+	        f=0;
+	        while(k>0)
+	        {
+	            arr2[h++]= k%10;             //if 102 is the num...2 must be stored in arr2..for that we find the mod by 10
+	            k=k/10;
+	        }
+	        
+	        for(int j=0;j<h-1;++j)
+	        {
+	            for( k=j+i;k<h;++k)
+	            {
+	                if(arr2[j]==arr2[k])
+	                {
+	                    f=1;
+	                    break;
+	                }
+	            }
+	            if(f==1)    //if the first iteration of inner loop finds a duplicate.. we need not check for all other values
+	            {
+	                break;
+	            }
+	        }
+	        if(f==0)
+	        {
+	            counter++;  //to count the number of unique values
+	        }
+	        h=0;        //reseting the arr2 index to 0
+	    }
+	    
+	    System.out.println("the number of unique digits is"+counter);
+	}
+}
