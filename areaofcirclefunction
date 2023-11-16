@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+     int r=6; double s;
+     s=area(r);
+    }
+    
+    public static double area(int x)
+    {
+        double cir=3.14*x*x;
+        System.out.println(cir);
+        return cir;
+    
+        
+    }
+}
