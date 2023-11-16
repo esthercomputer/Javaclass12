@@ -1,0 +1,53 @@
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int n,rem,i=0,c=0;
+	    int arr[]=new int[10];
+	    Scanner sc=  new Scanner(System.in);
+	    
+	    System.out.print("Enter a number");
+	    n=sc.nextInt();
+	    
+	    System.out.printf("Hexadecimal equivalent");
+	    while(n>0)
+	    {
+	        rem=n%16;
+	        arr[i]=rem;
+	        n=n/16;  //  n=n/16
+	        i++;
+	        c++;
+	    }
+	    for(i=c-1;i>=0;--i)
+	    {
+	        if(arr[i]>=10 && arr[i]<=15)
+	        {
+	            if(arr[i]==10)
+	            {
+	                System.out.println('A');
+	            }
+	            else if (arr[i]==11)
+	            {
+	                System.out.println('B');
+	            }
+	            else if (arr[i]==12)
+	            {
+	                System.out.println('C');
+	            }else if (arr[i]==13)
+	            {
+	                System.out.println('D');
+	            }else if (arr[i]==14)
+	            {
+	                System.out.println('E');
+	            }else if (arr[i]==15)
+	            {
+	                System.out.println('F');
+	            }
+	        }
+	        else{
+	            System.out.println(arr[i]);
+	        }
+	    }
+	}
+}
