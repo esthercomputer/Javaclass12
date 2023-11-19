@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[])
+    {
+    Rectangle r=new Rectangle(50,20);
+    Rectangle r1=new Rectangle(10,40);
+     r.Area();
+     r1.Area();
+    }
+    }
+    
+class Rectangle
+{
+    int l;
+    int b;
+    
+ Rectangle(int length, int breadth) 
+ {
+     l=length;
+     b=breadth;
+ }
+ public void Area()
+ {
+ int area=l*b;
+ System.out.println("The area of rectangle is" +area);
+ }
+}
