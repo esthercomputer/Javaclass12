@@ -1,0 +1,67 @@
+import java.util.*;
+class Employee
+{
+    Scanner sc= new Scanner(System.in);
+    String name; 
+    int ID;
+    double salary;
+    
+  Employee()
+ {
+     System.out.println("Enter a name");
+    name=sc.nextLine();
+    ID=1234;
+}
+public void getSalary()
+{
+ salary=10000;
+}
+}
+class Manager extends Employee
+{
+    Scanner sc=new Scanner(System.in);
+    String department;
+    
+    Manager()
+    { 
+        System.out.println("Enter department");
+        department=sc.nextLine();
+    }
+    public void manageTeam()
+    {
+        System.out.println("The team has completed the project");
+        System.out.println(name);
+        System.out.println(ID);
+        System.out.println(salary);
+    }
+}
+class Developer extends Employee
+{ 
+    Scanner sc=new Scanner(System.in);
+    String programmingLanguage;
+    
+    Developer()
+    {
+    System.out.println("Enter the programming language");
+    programmingLanguage=sc.nextLine();
+}
+public void writeCode()
+{
+    System.out.println("The team has written the code.");
+    System.out.println(name);
+    System.out.println(ID);
+    System.out.println(salary);
+    System.out.println(programmingLanguage);
+}
+}
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Manager mg=new Manager();
+	    Developer dp=new Developer();
+	   mg.getSalary();
+	   mg.manageTeam();
+	   dp.writeCode();
+	}
+}
