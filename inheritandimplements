@@ -1,0 +1,43 @@
+import java.util.*;
+interface Vehicle
+{
+   public void displayVehicleInfo();
+}
+class Engine 
+{
+   public void displayEngineInfo()
+   {
+       Scanner sc=new Scanner(System.in);
+        String engineType;
+   
+     System.out.println("What is Engine type?");
+     engineType=sc.nextLine();
+     System.out.println(engineType);
+   
+   }
+}
+class Car extends Engine implements Vehicle
+{
+Scanner sc=new Scanner(System.in);
+ String vehicleType;
+ String engineType;
+ 
+ Car()
+ {
+ System.out.println("What is the Vehicle Type?");
+ vehicleType=sc.nextLine();
+ }
+ public void displayVehicleInfo()
+ {
+System.out.println(vehicleType);
+ }
+}
+class Main
+{
+ public static void main(String args[])
+ {
+    Car c=new Car();
+    c.displayVehicleInfo();
+    c.displayEngineInfo();
+ }
+}
